@@ -4,10 +4,13 @@ import 'dart:math';
 Random rand = Random();
 
 void main() {
-  var name = randName();
-  querySelector('#output').text = 'Your name is $name';
+  List party = [randName()];
+  querySelector('#output')
+    ..text = 'Your name is ${party[0]}\n'
+    ..appendHtml('\n')
+    ..appendText('You are preparing to go on an adventure');
 }
 String randName(){
-  List nameList = ['Alice', 'Bob', 'Claire'];
+  List nameList = ['Andrea', 'Beatrice', 'Claire', 'Danielle'];
   return nameList[rand.nextInt(nameList.length)];
 } 
