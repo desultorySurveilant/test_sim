@@ -12,10 +12,10 @@ void main() {
   double oddsIncrementPerRecruit = 0.1;
 
   Element e = querySelector('#output')
-    ..text = "You are a young ${party[0]}\n"
-    ..appendText('You are preparing to go on an adventure\n')
-    ..appendText('You must defeat the vile $badName who killed your parents\n')
-    ..appendText('But first you must gather allies to aid you in this quest\n');
+    ..text = "You are a young ${party[0]}.\n"
+    ..appendText('You are preparing to go on an adventure.\n')
+    ..appendText('You must defeat the vile $badName who killed your parents.\n')
+    ..appendText('But first you must gather allies to aid you in this quest.\n');
   while(!bossFight && party.length < maxParty){
     recruitMembers(party, e);
     if(rand.nextDouble() < bossFightOdds){
@@ -24,13 +24,13 @@ void main() {
       bossFightOdds += oddsIncrementPerRecruit;
     }
   }
-  e.appendText('The party -- ${partyToString(party)} -- prepares to face the $badName\n');
+  e.appendText('The party -- ${partyToString(party)} -- prepares to face the ${badName}.\n');
   if(party.length >= rand.nextInt(maxParty)){
-    e.appendText('The valiant ${party[0]} and their fellow companions have vanquished the $badName\n');
-    e.appendText('They live out the rest of their lives happily and peacefully\n');
+    e.appendText('The valiant ${party[0]} and their fellow companions have vanquished the ${badName}.\n');
+    e.appendText('They live out the rest of their lives happily and peacefully.\n');
   }else {
-    e.appendText('Unfortunately, the noble ${party[0]} and their companions have failed\n');
-    e.appendText('They were defeated by the terrible $badName and are locked in prison for the rest of their lives\n');
+    e.appendText('Unfortunately, the noble ${party[0]} and their companions have failed.\n');
+    e.appendText('They were defeated by the terrible $badName and are locked in prison for the rest of their lives.\n');
   }
 }
 String randName(){
