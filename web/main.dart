@@ -24,7 +24,7 @@ void main() {
       bossFightOdds += oddsIncrementPerRecruit;
     }
   }
-  e.appendText('The party -- ${partyToString(party)} -- prepares to face the ${badName}.\n');
+  e.appendText('Your party -- ${partyToString(party)} -- prepares to face the ${badName}.\n');
   if(party.length >= rand.nextInt(maxParty)){
     e.appendText('The valiant ${party[0]} and their fellow companions have vanquished the ${badName}.\n');
     e.appendText('They live out the rest of their lives happily and peacefully.\n');
